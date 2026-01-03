@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    width: 220px;
+    height: 120px;
+}
+ul{
+    list-style: none;
+}
+/*AHORA VAMOS A DARLE  MAS COLOR A LAS LETRAS DE LA PAGINA*/
+nav{
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+/*ahora necesitamos hacer que estos componentes sean flexibles para ello vamos a hacer uso de el uso de los displays osea comportamiento*/
+nav ul{
+    display: flex;
+}
+nav ul li a{
+    color: white;
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
+    padding: 10px 25px;
+    display: inline-block;
+
+}
