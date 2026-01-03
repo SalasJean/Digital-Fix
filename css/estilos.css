@@ -1,82 +1,213 @@
+/*ahora todo lo aprendido fue  solo la primera parte ose a la practica ahora vamos implementar de manera mas limpia*/
 *{
     margin: 0;
     padding: 0;
 }
-.logo{
-    width: 180px;
-    height: 120px;
-    border-radius: 15px;
-}
 ul{
     list-style: none;
 }
-/*AHORA VAMOS A DARLE  MAS COLOR A LAS LETRAS DE LA PAGINA*/
+a{
+    text-decoration: none;
+}
+/*ahora vmaos con el uso del nav vamos aqui*/
 nav{
     display: flex;
     justify-content: space-between;
-   
+    padding: 20px;
     position: fixed;
-    top: 0;
-    left: 0;
     width: calc(100% - 40px);
     align-items: center;
+    z-index: 1;
 }
-/* recxuerda que estmoa usando un emtodo que hace que del tamaño totalse resta solo los lados para ello se suma ahora necesitamos hacer que estos componentes sean flexibles para ello vamos a hacer uso de el uso de los displays osea comportamiento*/
+.logo{
+    width: 80px;
+}
 nav ul{
     display: flex;
 }
 nav ul li a{
-    color: white;
-    font-family: 'Atkinson Hyperlegible Mono', monospace;
-    padding: 10px 25px;
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 10px 20px;
     display: inline-block;
-
-}
-.asideImg{
-    height: 180px;
-    width: auto;
-}
-.soporte{
     
 }
-/* AHORA VAMOS A TRABAR CON EL AREA DE SECTIO SI?*/
-/*recuerda que las clases se declaran con un punto y
-los id pues como una etiqueta de css normal asi*/
+/*recuerda que tambien se puede hacer todo esto de manera directa pero recuerda siempre la relacion padre e hijo asi*/
+nav a:hover{
+    color: green;
+    text-decoration: underline;
+
+
+}
+/*ahora pasamos al area de section*/
 .sectionHead{
     display: flex;
+    background-color: antiquewhite;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px;
+
 }
 .sectionHead aside{
+    width: 40%;
     display: flex;
     align-items: center;
 }
- /*cuando aqui alineamos items ya no es necesario darle tamaño*/
 .sectionHead aside img{
-   
+   width: 220px;
+   height: 360px;
+   border-radius: 10px;
 }
 .experience{
-    font-family: 'inter', sans-serif;
-    color: blue;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
+    color: blue;
     font-size: 15px;
 }
 .sectionHead aside section h1{
-    font-family: 'poppins', sans-serif;
-    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
     font-weight: 500;
     line-height: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .expDescr{
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
     color: black;
-
 }
-.sectionHead  aside section a{
-    font-family: 'Inter', sans-serif;
+.sectionHead aside section a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 500;
     display: inline-block;
-    background-color: aqua;
-    border-radius: 5px;
+    background-color: blue;
+    color: white;
     padding: 10px 25px;
+    border-radius: 5px;
+    margin-top: 60px;
+    font-size: 14px;
 }
+.sectionHead aside a i{
+    margin-left: 10px;
+}
+.sectionHead article img{
+    display: block;
+    width: 100%;
+}
+.sectionHead article{
+    position:  relative;
+    width: 60%;
+}
+.sectionHead article p{
+    position: absolute;
+}
+.soporte{
+    background-color: blue;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    bottom: 0;
+    padding: 60px 50px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.soporte span{
+    display: block;
+}
+.soporteApple{
+    bottom: 30px;
+    left: 50%;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 20px 20px;
+}
+.soporteApple i,
+.soporteTiempo i{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.soporteApple span,
+.soporteTiempo span{
+    width: 130px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.soporteTiempo{
+    bottom: 30px;
+    left: 66%;
+    background-color: blue;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 20px 20px;
+    color: white;
+    
+}
+/*ahora si vamos con el siguiente contenedor llamado SERVICES*/
+.services{
+    background-color: blue;
+    padding: 120px 0;
+    
+}
+/*recuerda que una buena practica tanto en css y html es la jerarquia nunca lo olvides porfavor es muy importante si?*/
+.container{
+    max-width: 1200px;
+    /*margin: auto;*/
+    margin-left: auto;
+    margin-right: auto;
+    /**/
+    /*display: flex;*/
+    display: flex;
+    column-gap: 20px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.container article div {
+    height: 250px; /* AJUSTA ESTE VALOR a la altura que desees */
+    width: 100%;
+    overflow: hidden; /* Corta lo que sobre */
+}
+.container article{
+    width: calc(100% / 3 - 20px);
+    background-color: #1f72ff;
+    padding-top: 50px;
+}
+.container article h2{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.5;
+    padding: 0 50px;
+    
+}
+.container article p{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 50px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.container article span{
+    color: #03d7d1;
+    font-size: 18px;
+    padding: 0 50px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+.container article div img {
+    width: 100%;
+    display: block;
+}
+/*ahora vamos a darle forma y color a los textos e imagenes pero au no tocaremos nada de del span*/
