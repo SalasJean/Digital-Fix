@@ -1,0 +1,38 @@
+/*RECUERDA QUE LA NUEVA FORMA DE TRABAJAR ES CON VARIABLES ES CON EL @USE
+Y ADEMAS CUANDO SE TRABAJA CON VARIABLES DEVEMOS IMPORTAR EL ARCHIVO
+QUE CONTIENE LAS VARIABLES Y ADEMAS DE ELLO DEVEMOS AGREGAR UN PREFIJO
+QUE ES EL NOMBRE DEL ARCHIVO DEL DEL CONTENEDOR DE LA VARIABLE AL NOMBRE DE LA 
+VARIABLE ASI
+nombredelarchivo.nombredelavariable*/
+/*recuerda que @import no es seguro y es de forma global*/
+@use "../base/constantes";
+//esta es la forma de llamar de forma normal
+//pero esta sera la forma de llamar para evitar poner el prefijo
+//@use "../base/constantes" as  *;
+
+
+.menu{
+    background-color: #4d4d4d;
+    &__contenedor{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--img{
+            width: 80px;
+        }
+        &__menubox{
+            display: flex;
+
+            &__item{
+                &--link{
+                    color: white;
+                    font-family: $font-inter;
+                    padding: 1rem 2rem;
+                    font-size: 1.6rem;     
+                }
+            }
+        }
+    }
+}
+/*Recuerda todo esto de arriba esta es la magia de usar saas todoe esto nos evita
+teneer codigo spaguetti no permite ser scalables y modulares reucerda*/

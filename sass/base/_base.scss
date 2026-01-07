@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*recuerda que si agregamos padding o borders o margin esto hace que esos 
+    pixeles que se agreguen no se sume ese el es trabajo de border box recuerda */
+}
+/*AQUI VAMOS A APLCIAR UN POCO DE TEORIA CONCEPTOS MUY IMPORTANTES COMO SON:
+EL TAMAÑO DE ÑLA FUENTE POR DEFECTO EN HTML ES DE 16PX EL OBJETIVO?
+TRANSFORMAR ESE TAMAÑO DE LA FUENTE A UNA DE 10
+TAMBIEN TRABAJAR CON LA UNIDAD DE MEDIDA LLAMADA REM EN HTML
+UN REM EQUIVLAE EN MEDIDAS EQUIVALE A = 10PX POR DEFECTO 
+AHORA SI QUEREMOS SABER EL TAMAÑO EN REM DE 16 PIXELES ESTO VENDIRA A SER IGAUL A
+1.6REM EQUIVALDRIA AHORA A 16PIXELES
+AHORA EN EL DESARROLLO WEB NOS PIDEN QUE EL TAMAÑO DE TODO TIPOP DE FUENTE SEA SIEMPRE EN
+PORCENTAJE SI EL TAMAÑO ORIGINAL ES DE 16PX Y NOSOTROS POR EJEMPLO QUEREMOS
+CAMBIAR A 10 PX LO UNICO QUE DEVEMOS APLICAR ES LA REGLA DE TRES SIMPLE ASI
+SI 16PX = 100%
+CUANTO EQUIVADRA 10PX? AQUI DEVEMOS REALIZAR LA REGLA DE TRES SIMPLE
+APLICANDO LA REGLA DE TRES SIMPLE 10PX equivaldria el 62.5% de tamaño de fuente
+ahora
+ */
+ html{
+    font-size: 62.5%;
+ }
+ a,
+ a:link,
+ a:visited{
+     text-decoration: none;
+     //como deve comportarse la pantalla? pues todos en bloque y en linea
+     display: inline-block;
+ }
+ ul{
+    list-style: none;
+ }
+ img{
+    display: block;
+ }
+ /*recuerda que todo esto que hicimos es preparar el entorno de trabajo para evitar errores luego osea de forma general
+ ahora si queremos que no tengamos errores en el futuro si?*/
